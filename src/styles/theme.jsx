@@ -6,16 +6,23 @@ export const theme = Object.freeze({
     light: '#f2f2f2',
     dark: '#212121',
     ocean: '#008B8B',
+    black: '#000',
+    text: '#2a2a2a',
+    primary: '#07c',
+    secondary: '#05a',
+    muted: '#f6f6f6',
     mainBackground: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
     tagBackground: ['linear-gradient(to bottom, #FFD194, #D1913C)'],
   },
   fontSizes: {
-    small: '14px',
-    medium: '18px',
-    large: '22px',
+    xs: '12px',
+    s: '14px',
+    m: '16px',
+    l: '32px',
+    xl: '64px',
   },
   fontWeight: {
-    body: 400,
+    normal: 400,
     medium: 500,
     bold: 700,
   },
@@ -28,5 +35,14 @@ export const theme = Object.freeze({
   },
   animation: {
     cubicBezier: '0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
+  },
+  radii: {
+    none: '0',
+    normal: '4px',
+    round: '50%',
+  },
+  borders: {
+    none: 'none',
+    normal: '1px solid',
   },
 });

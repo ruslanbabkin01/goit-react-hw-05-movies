@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
-const API_KEY = '29966506-3ac2aa6cf44b4238878b6f625';
+const API_KEY = '13d1d6108716c95692977ae4bce9cff7';
 
 axios.defaults.baseURL = `https://pixabay.com/api/`;
 
@@ -11,7 +11,7 @@ axios.defaults.params = {
   per_page: 12,
 };
 
-export async function fetchImages(searchQuery, page) {
+export async function fetchMovies(searchQuery, page) {
   const { data } = await axios.get(
     `?key=${API_KEY}&q=${searchQuery}&page=${page}`
   );

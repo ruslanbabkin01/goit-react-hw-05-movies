@@ -1,5 +1,5 @@
 {
-  "name": "hw-03-movies",
+  "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://ruslanbabkin01.github.io/goit-react-hw-05-movies/",
@@ -22,6 +22,7 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.6.0",
     "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
     "shortid": "^2.2.16",

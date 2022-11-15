@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import { Picture, Container } from './Notification.styled';
-import pict from '../../images/img_.jpg';
+import { Container } from './Notification.styled';
 
 export const Notification = ({ message, status }) => (
   <Container>
-    {status === 'idle' && <Picture src={pict} alt="#" />}
+    {status === 'idle' && <span>search movies</span>}
     {status === 'empty' && <p>{message}</p>}
     {status === 'error' && <p>{message}</p>}
   </Container>
