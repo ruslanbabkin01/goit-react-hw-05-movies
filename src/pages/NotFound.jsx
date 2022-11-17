@@ -11,11 +11,11 @@ export const ErrorLink = styled(Link)`
   color: blue;
 `;
 
-export const NotFound = () => {
+export default function NotFound() {
   return (
     <ErrorText>
       This page was not found, please return to
       <ErrorLink to="/">Home page</ErrorLink>
     </ErrorText>
   );
-};
+}

@@ -1,12 +1,26 @@
-import { Outlet } from 'react-router-dom';
+import { VideoGallery } from '../components/VideoGallery/VideoGallery';
+import { fetchTrendMovies } from '../api/themoviedbAPI';
+import { useState, useEffect } from 'react';
 
-export const Home = () => (
-  <main>
-    <p>
-      Movies Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-      laboriosam placeat incidunt rem illum animi nemo quibusdam quia voluptatum
-      voluptate.
-    </p>
-    <Outlet />
-  </main>
-);
+export default function Home() {
+  const [movies, setMovies] = useState(null);
+
+  useEffect(() => {
+    async function fetchMovies() {
+      try {
+        const data = await fetchTrendMovies();
+        setMovies(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+    fetchMovies();
+  }, []);
+
+  return (
+    <main>
+      <h2>Trending today</h2>
+      {movies && <VideoGallery movies={movies}></VideoGallery>}
+    </main>
+  );
+}
