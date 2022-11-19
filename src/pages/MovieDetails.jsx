@@ -1,20 +1,23 @@
 import { useParams } from 'react-router-dom';
-// import { getProductById } from '../fakeAPI';
+import { useEffect, useState } from 'react';
+import { fetchAboutMovie } from '../api/themoviedbAPI';
 
 export default function MovieDetails() {
-  const { id } = useParams();
-  // const product = getProductById(id);
+  const { movieId } = useParams();
+  const [movie, setMovie] = useState(null);
+  // const movie = getProductById(id);
+
+  useEffect(() => {
+    const response = fetchAboutMovie(movieId);
+    // console.log(response);
+  }, [movieId]);
+
+  // if (!movie) return;
+
   return (
     <main>
       <div>
-        <p>
-          MovieDetails Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab quae
-          cupiditate a, sed reprehenderit? Deleniti optio quasi, amet natus
-          reiciendis atque fuga dolore? Lorem, ipsum dolor sit amet consectetur
-          adipisicing elit. Impedit suscipit quisquam incidunt commodi fugiat
-          aliquam praesentium ipsum quos unde voluptatum?
-        </p>
+        <p>{movie.original_title}</p>
       </div>
     </main>
   );

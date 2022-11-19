@@ -1,14 +1,15 @@
+import { Searchbar } from 'components';
 import { Outlet } from 'react-router-dom';
+import { fetchSearchMovies } from '../api/themoviedbAPI';
+import { VideoGallery } from 'components';
 
 export default function Movies() {
   return (
-    <div>
-      <p>
-        Movies Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-        laboriosam placeat incidunt rem illum animi nemo quibusdam quia
-        voluptatum voluptate.
-      </p>
+    <main>
+      <Searchbar />
+
+      <VideoGallery />
       <Outlet />
-    </div>
+    </main>
   );
 }

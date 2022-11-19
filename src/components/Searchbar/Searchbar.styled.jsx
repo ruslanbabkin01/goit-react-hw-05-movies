@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { FaSearch } from 'react-icons/fa';
 
-export const Header = styled.header`
+export const Container = styled.div`
   top: 0;
   left: 0;
   position: sticky;
@@ -10,10 +10,7 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   min-height: 64px;
-  padding-right: 24px;
-  padding-left: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 24px;
   color: #fff;
   background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
@@ -35,10 +32,6 @@ export const BtnSubmit = styled.button`
   width: 48px;
   height: 48px;
   border: 0;
-  /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center; */
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -54,18 +47,6 @@ export const ButtonIcon = styled(FaSearch)`
   height: 20px;
   fill: #000;
 `;
-
-// export const BtnLabel = styled.span`
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   padding: 0;
-//   overflow: hidden;
-//   clip: rect(0, 0, 0, 0);
-//   white-space: nowrap;
-//   clip-path: inset(50%);
-//   border: 0;
-// `;
 
 export const InputForm = styled.input`
   display: inline-block;

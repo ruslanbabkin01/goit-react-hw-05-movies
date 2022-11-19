@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import {
-  Header,
+  Container,
   SearchForm,
   BtnSubmit,
   InputForm,
@@ -35,7 +35,7 @@ export const Searchbar = ({ onSubmit }) => {
   };
 
   return (
-    <Header>
+    <Container>
       <SearchForm onSubmit={handleSubmit}>
         <BtnSubmit type="submit">
           <ButtonIcon />
@@ -47,11 +47,11 @@ export const Searchbar = ({ onSubmit }) => {
           autoComplete="off"
           value={query}
           autoFocus
-          placeholder="Search images and photos"
+          placeholder="Search movies"
           onChange={handleQueryChange}
         />
       </SearchForm>
-    </Header>
+    </Container>
   );
 };
 

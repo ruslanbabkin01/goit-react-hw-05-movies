@@ -2,8 +2,8 @@ import { ToastContainer } from 'react-toastify';
 import { lazy, Suspense } from 'react';
 import { SharedLayout } from './index';
 import { Route, Routes } from 'react-router-dom';
-import Cast from 'pages/Cast';
-import Reviews from 'pages/Reviews';
+import Cast from 'components/Cast/Cast';
+import Reviews from 'components/Reviews/Reviews';
 
 const Home = lazy(() => import('pages/Home'));
 const MovieDetails = lazy(() => import('pages/MovieDetails'));
